@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/Yahyaball/digitalbank-landing-page
+- Live Site URL: https://digitalbank-landing-page-sigma.vercel.app
 
 ## My process
 
@@ -45,6 +45,7 @@ Users should be able to:
 - Mobile-first workflow
 - SCSS
 - TypeScript
+- [Vite](https://vite.dev/)
 - [Vue](https://vuejs.org/) - JavaScript framework
 
 ### What I learned
