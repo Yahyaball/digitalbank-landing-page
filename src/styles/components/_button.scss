@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  @include text-preset-7("bold");
+  border: none;
+  padding: $spacing-100 $spacing-400;
+  background: $gradient-1;
+  color: $white;
+  border-radius: 1.375rem;
+  transition: opacity 250ms ease;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+  &:hover,
+  &:focus-visible {
+    opacity: 60%;
+  }
+}

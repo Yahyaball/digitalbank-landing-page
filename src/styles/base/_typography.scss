@@ -1,0 +1,34 @@
+@use "../abstracts" as *;
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body,
+button {
+  font-family: "Public Sans", sans-serif;
+}
+
+h1 {
+  font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  @include desktop {
+    font-size: 3.5rem;
+  }
+  color: $blue-950;
+}
+
+h2 {
+  @include text-preset-3;
+  color: $blue-950;
+}
+
+h3 {
+  @include text-preset-4;
+  color: $blue-950;
+}
+
+p {
+  @include text-preset-7("regular");
+  color: $gray-600;
+}
+
+a {
+  text-decoration: none;
+}

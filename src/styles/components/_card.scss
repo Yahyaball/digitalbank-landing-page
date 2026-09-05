@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+.card {
+  background: $white;
+  border-radius: 5px;
+  img {
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  .content {
+    .publisher {
+      @include text-preset-8;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-200;
+    padding: 1.25rem $spacing-400 1.8125rem $spacing-400;
+    @include tablet {
+      padding: 1.25rem $spacing-500 1.8125rem $spacing-500;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-100;
+      h3 {
+        @include text-preset-6;
+      }
+      p {
+        @include text-preset-7("regular");
+      }
+    }
+  }
+  @include desktop {
+    img {
+      height: 12.5rem;
+    }
+    .content {
+      padding: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+body {
+  background: $gray-50;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  section:nth-child(2) {
+    background-color: $gray-100;
+  }
+}

@@ -1,0 +1,48 @@
+@use "../abstracts" as *;
+
+.article {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: $spacing-800 $spacing-300;
+  .article-container {
+    max-width: 20.4375rem;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-600;
+    align-items: center;
+    .article-lists {
+      display: grid;
+      gap: $spacing-200;
+    }
+  }
+  @include tablet {
+    padding: $spacing-1000 0;
+    .article-container {
+      max-width: 38rem;
+      gap: $spacing-800;
+      h2 {
+        @include text-preset-2;
+      }
+      .article-lists {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+    }
+  }
+  @include desktop {
+    min-height: 41.35rem;
+    padding: 5.25rem $spacing-1000 $spacing-600 $spacing-1000;
+    .article-container {
+      width: 100%;
+      align-items: flex-start;
+      max-width: 1116px;
+      gap: $spacing-700;
+      .article-lists {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: $spacing-400;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+
+.hero {
+  background: url(../../assets/backgrounds/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -4.25rem;
+  background-size: 100% 22rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: $spacing-700;
+  .desktop-img {
+    display: none;
+  }
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-600;
+    align-items: center;
+    img {
+      width: min(97.5vw, 21.4rem);
+      height: min(97.5vw, 18.65rem);
+      aspect-ratio: 21.4 / 18.65;
+      margin-bottom: -1.15rem;
+      object-fit: cover;
+      object-position: 0 100%;
+    }
+    .hero-desc {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: $spacing-300;
+      max-width: 22rem;
+      padding: 0 $spacing-300;
+    }
+  }
+  @include tablet {
+    background: url(../../assets/backgrounds/bg-intro-desktop.svg);
+    background-position-y: -21.5rem;
+    background-repeat: no-repeat;
+    background-size: 65.75rem;
+    background-position-x: 26%;
+    padding-bottom: $spacing-900;
+    .hero-container {
+      padding-left: 0.75rem;
+      img {
+        height: 34.25rem;
+        width: 39.75rem;
+        margin-bottom: -1.15rem;
+      }
+      .hero-desc {
+        max-width: 27rem;
+        padding: 0;
+        h1 {
+          @include text-preset-1;
+        }
+        p {
+          @include text-preset-5;
+        }
+      }
+    }
+  }
+  @include desktop {
+    padding-bottom: 0;
+    position: relative;
+    background-position: calc(50% + 33rem) -15.5rem;
+    background-size: 77rem;
+    height: 41rem;
+    padding: $spacing-1000;
+    .desktop-img {
+      position: absolute;
+      display: block;
+      width: calc(50% + -5.25rem);
+      height: 52rem;
+      background: url(../../assets/images/image-mockups.png);
+      background-repeat: no-repeat;
+      background-position-y: -10.25rem;
+      top: 0;
+      right: 0;
+    }
+    .hero-container {
+      padding-left: 0;
+      max-width: 69.5rem;
+      width: 100%;
+      flex-direction: row;
+      img {
+        display: none;
+      }
+      .hero-desc {
+        align-items: flex-start;
+        text-align: start;
+      }
+    }
+  }
+}

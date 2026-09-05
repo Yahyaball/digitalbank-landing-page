@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+
+.features {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: $spacing-800 $spacing-300;
+  .features-container {
+    max-width: 20.4375rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: $spacing-600;
+    .why-choose {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-200;
+    }
+    ul {
+      display: grid;
+      gap: $spacing-400;
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-500;
+        align-items: center;
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: $spacing-300;
+          a {
+            color: $blue-950;
+          }
+        }
+      }
+    }
+  }
+  @include tablet {
+    padding: $spacing-1000 0;
+    .features-container {
+      max-width: 38rem;
+      align-items: center;
+      gap: $spacing-900;
+      h2 {
+        @include text-preset-2;
+      }
+      .why-choose {
+        gap: $spacing-400;
+        max-width: 32.375rem;
+        p {
+          @include text-preset-5;
+        }
+      }
+      ul {
+        min-height: 616px;
+        grid-template-columns: 255px 255px;
+        gap: $spacing-800 $spacing-700;
+        padding-right: $spacing-500;
+        li {
+          align-items: flex-start;
+          text-align: start;
+          div {
+            gap: $spacing-300;
+            p {
+              font-size: 0.965rem;
+              line-height: 170%;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include desktop {
+    min-height: 42.25rem;
+    padding: 6rem $spacing-1000;
+    .features-container {
+      width: 100%;
+      align-items: flex-start;
+      max-width: 1116px;
+
+      .why-choose {
+        text-align: start;
+        max-width: 40rem;
+      }
+      ul {
+        min-height: auto;
+        grid-template-columns: repeat(4, minmax(min(100%, 10rem), 23rem));
+        gap: $spacing-400;
+        padding-right: 0;
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
